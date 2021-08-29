@@ -13,22 +13,15 @@ function setup() {
 
 	engine = Engine.create();
 	world = engine.world;
+	
+// create ball options
 
-	var ball_options={
-		isStatic:false,
-		restitution:0.3,
-		friction:0,
-		density:1.2
-	}
+// create ball  body
+	
+// create ground, right and left side wall using ground class
+	
 
-	ball = Bodies.circle(260,100,radius/2,ball_options);
-	World.add(world,ball);
-
-	groundObj=new ground(width/2,670,width,20);
-	leftSide = new ground(1100,600,20,120);
-	rightSide = new ground(1350,600,20,120);
-
-	Engine.run(engine);
+Engine.run(engine);
   
 }
 
@@ -36,13 +29,9 @@ function setup() {
 function draw() {
   rectMode(CENTER);
   background(0);
+// display the ball ,ground, right and left side wall
 
-
-  ellipse(ball.position.x,ball.position.y,radius,radius);
-
-  groundObj.display();
-  leftSide.display();  
-  rightSide.display();
+ 
   
 }
 
